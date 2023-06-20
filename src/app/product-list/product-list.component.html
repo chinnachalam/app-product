@@ -1,0 +1,19 @@
+<!-- <body style="background-color: aqua;">
+    <div>
+        <p>{{title}}</p>
+
+        <img [src]="userProfilePic">
+        <br>
+        
+        <label>City Name </label>
+        <input [(ngModel)]="cityName"/>
+        <label>{{cityName}}</label>
+    </div>
+</body> -->
+
+
+<label *ngIf="showFirstName">First Name: John </label>
+<br>
+<label *ngIf="showLastName">Last Name: Kelvin</label>
+
+<div *ngFor="let name of names" [ngClass]="{'color': 'red'}">{{name}}</div>
