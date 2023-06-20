@@ -1,0 +1,29 @@
+<p>product-ng-class works!</p>
+
+
+<div>
+    <p class="product-style">Product Name: Laptop</p>
+    <p class="product-style">Product Name: Keyboard</p>
+</div>
+
+<div>Product Details</div>
+    <table>
+        <thead>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Price</td>
+        </thead>
+        <tr *ngFor="let product of products" >
+            <td>
+                {{product.id}}
+            </td>
+            <td>
+                {{product.name}}
+            </td>
+            <td [ngClass]="{'price-large-style-class': product.price >= 50,
+                'price-medium-style-class': product.price < 50 && product.price >= 30,
+                'price-small-style-class': product.price < 30}">
+                {{product.price}}
+            </td>
+        </tr>
+    </table>

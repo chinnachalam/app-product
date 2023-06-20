@@ -1,0 +1,53 @@
+<p>product-ng-style works!</p>
+
+<div>
+    <p style="background-color: green; color: white;">Product Name: laptop</p>
+</div>
+
+
+<div>
+    <p [ngStyle]="{'background-color': 'green'}">Product Name: laptop</p>
+</div>
+
+<div>Product Details</div>
+    <table>
+        <thead>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Price</td>
+        </thead>
+        <tr *ngFor="let product of products" >
+            <td>
+                {{product.id}}
+            </td>
+            <td>
+                {{product.name}}
+            </td>
+            <td [ngStyle]="{'background-color': getColor(product.price)}">
+                {{product.price}}
+            </td>
+        </tr>
+    </table>
+
+
+    <!-- Alternative Syntex for ngStyle -->
+
+<div>Product Details</div>
+<table>
+    <thead>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Price</td>
+    </thead>
+    <tr *ngFor="let product of products" >
+        <td>
+            {{product.id}}
+        </td>
+        <td>
+            {{product.name}}
+        </td>
+        <td [style.background-color]="getColor(product.price)">
+            {{product.price}}
+        </td>
+    </tr>
+</table>

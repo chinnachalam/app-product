@@ -1,0 +1,17 @@
+.product-style {
+    background-color: yellow;
+    font-size: 20px;
+    color: black;
+}
+
+.price-small-style-class {
+    background-color: red;
+}
+
+.price-medium-style-class {
+    background-color: yellow;
+}
+
+.price-large-style-class {
+    background-color: green;
+}

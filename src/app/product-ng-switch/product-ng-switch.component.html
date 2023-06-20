@@ -1,0 +1,28 @@
+<p>product-ng-switch works!</p>
+
+
+<div>Product Details</div>
+    <table>
+        <thead>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Price</td>
+        </thead>
+        <tr *ngFor="let product of products" [ngSwitch]="product.name">
+            <td>
+                {{product.id}}
+            </td>
+            <td *ngSwitchCase="'Laptop'" style="color: green;">
+                {{product.name}}
+            </td>
+            <td *ngSwitchCase="'Keyboard'" style="color: yellow;">
+                {{product.name}}
+            </td>
+            <td *ngSwitchDefault style="color: red;">
+                {{product.name}}
+            </td>
+            <td>
+                {{product.price}}
+            </td>
+        </tr>
+    </table>

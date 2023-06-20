@@ -1,0 +1,34 @@
+<p>product-pipes works!</p>
+
+
+<div>Product Details</div>
+    <table style="border: 1px solid green;">
+        <thead>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Price</td>
+            <td>Manfacturing Date</td>
+            <td>Product Age</td>
+        </thead>
+        <tr *ngFor="let product of products">
+            <td>
+                {{product.id}}
+            </td>
+            <td>
+                {{product.name | uppercase}}
+            </td>
+            <td>
+                {{product.description | lowercase}}
+            </td>
+            <td>
+                {{product.price | currency: 'EUR'}}
+            </td>
+            <td>
+                {{product.manDate | date:'dd/MM/YY'}}
+            </td>
+            <td>
+                {{product.manDate | age  }}
+            </td>
+        </tr>
+    </table>
