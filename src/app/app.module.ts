@@ -11,6 +11,8 @@ import { ProductNgClassComponent } from './product-ng-class/product-ng-class.com
 import { ProductNgSwitchComponent } from './product-ng-switch/product-ng-switch.component';
 import { ProductPipesComponent } from './product-pipes/product-pipes.component';
 import { AgePipe } from './pipes/age.pipe';
+import { RatingComponent } from './rating/rating.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AgePipe } from './pipes/age.pipe';
     ProductNgClassComponent,
     ProductNgSwitchComponent,
     ProductPipesComponent,
-    AgePipe
+    AgePipe,
+    RatingComponent,
+    TemplateFormComponent
   ],
   imports: [
     BrowserModule,

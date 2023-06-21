@@ -1,19 +1,38 @@
-<!-- <body style="background-color: aqua;">
-    <div>
-        <p>{{title}}</p>
-
-        <img [src]="userProfilePic">
-        <br>
-        
-        <label>City Name </label>
-        <input [(ngModel)]="cityName"/>
-        <label>{{cityName}}</label>
-    </div>
-</body> -->
+<p>product-pipes works!</p>
 
 
-<label *ngIf="showFirstName">First Name: John </label>
-<br>
-<label *ngIf="showLastName">Last Name: Kelvin</label>
-
-<div *ngFor="let name of names" [ngClass]="{'color': 'red'}">{{name}}</div>
+<div>{{title}}</div>
+    <table style="border: 1px solid green;">
+        <thead>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Price</td>
+            <td>Manfacturing Date</td>
+            <td>Product Age</td>
+            <td>Rating</td>
+        </thead>
+        <tr *ngFor="let product of products">
+            <td>
+                {{product.id}}
+            </td>
+            <td>
+                {{product.name | uppercase}}
+            </td>
+            <td>
+                {{product.description | lowercase}}
+            </td>
+            <td>
+                {{product.price | currency: 'EUR'}}
+            </td>
+            <td>
+                {{product.manDate | date:'dd/MM/YY'}}
+            </td>
+            <td>
+                {{product.manDate | age  }}
+            </td>
+            <td>
+                <app-rating [rating]="product.rating" (ratingClickEvent) ="parentRatingClickEvent($event)"></app-rating>
+            </td>
+        </tr>
+    </table>
