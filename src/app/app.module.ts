@@ -13,6 +13,9 @@ import { ProductPipesComponent } from './product-pipes/product-pipes.component';
 import { AgePipe } from './pipes/age.pipe';
 import { RatingComponent } from './rating/rating.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
+import { TemplateFormExampleComponent } from './template-form-example/template-form-example.component';
+import { NotificationListComponent } from './webhook/all/notification-list/notification-list.component';
+import { NotificationComponent } from './webhook/all/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { TemplateFormComponent } from './template-form/template-form.component';
     ProductPipesComponent,
     AgePipe,
     RatingComponent,
-    TemplateFormComponent
+    TemplateFormComponent,
+    TemplateFormExampleComponent,
+    NotificationListComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
