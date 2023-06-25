@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './prodct/menu/menu.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductNgStyleComponent } from './product-ng-style/product-ng-style.component';
 import { ProductNgClassComponent } from './product-ng-class/product-ng-class.component';
 import { ProductNgSwitchComponent } from './product-ng-switch/product-ng-switch.component';
@@ -16,6 +16,13 @@ import { TemplateFormComponent } from './template-form/template-form.component';
 import { TemplateFormExampleComponent } from './template-form-example/template-form-example.component';
 import { NotificationListComponent } from './webhook/all/notification-list/notification-list.component';
 import { NotificationComponent } from './webhook/all/notification/notification.component';
+import { ReactiveFormExampleComponent } from './reactive-form-example/reactive-form-example.component';
+import { ReactiveFormWithForm0buikderExampleComponent } from './reactive-form-with-form0buikder-example/reactive-form-with-form0buikder-example.component';
+import { RoutingHomeComponent } from './routing/routing-home/routing-home.component';
+import { RoutingContactComponent } from './routing/routing-contact/routing-contact.component';
+import { RoutingAboutComponent } from './routing/routing-about/routing-about.component';
+import { RoutingLoginComponent } from './routing/routing-login/routing-login.component';
+import { RoutingPageNotFoundComponent } from './routing/routing-page-not-found/routing-page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +38,19 @@ import { NotificationComponent } from './webhook/all/notification/notification.c
     TemplateFormComponent,
     TemplateFormExampleComponent,
     NotificationListComponent,
-    NotificationComponent
+    NotificationComponent,
+    ReactiveFormExampleComponent,
+    ReactiveFormWithForm0buikderExampleComponent,
+    RoutingHomeComponent,
+    RoutingContactComponent,
+    RoutingAboutComponent,
+    RoutingLoginComponent,
+    RoutingPageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

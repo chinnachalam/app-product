@@ -1,7 +1,7 @@
 
-<h1>App Component</h1>
-
-<app-notification-list></app-notification-list>
+<!-- <h1>App Component</h1> -->
+<!--
+<app-notification-list></app-notification-list> -->
 
 <!-- <app-template-form-example></app-template-form-example> -->
 
@@ -18,3 +18,37 @@
 
 <!-- <app-product-ng-switch></app-product-ng-switch> -->
 <!-- <app-product-pipes></app-product-pipes> -->
+
+
+<!-- <app-reactive-form-example></app-reactive-form-example> -->
+
+ <!-- <app-reactive-form-with-form0buikder-example></app-reactive-form-with-form0buikder-example> -->
+
+<h1 class="text-center">Angular Route Example</h1>
+<ul class="nav justify-content-center">
+
+  <li class="nav-item">
+    <a class="nav-link active" routerLink="/home">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/about">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/contact">Contact Details</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/login">Login</a>
+  </li>
+</ul>
+
+<br>
+<br>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <router-outlet>
+     
+
+    </router-outlet>
+  </div>
+</div>
