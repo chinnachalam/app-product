@@ -23,6 +23,9 @@ import { RoutingContactComponent } from './routing/routing-contact/routing-conta
 import { RoutingAboutComponent } from './routing/routing-about/routing-about.component';
 import { RoutingLoginComponent } from './routing/routing-login/routing-login.component';
 import { RoutingPageNotFoundComponent } from './routing/routing-page-not-found/routing-page-not-found.component';
+import { RoutingProductsListComponent } from './routing/routing-products-list/routing-products-list.component';
+import { RoutingProductComponent } from './routing/routing-product/routing-product.component';
+import { RoutingProductEditComponent } from './routing/routing-product-edit/routing-product-edit.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { RoutingPageNotFoundComponent } from './routing/routing-page-not-found/r
     RoutingContactComponent,
     RoutingAboutComponent,
     RoutingLoginComponent,
-    RoutingPageNotFoundComponent
+    RoutingPageNotFoundComponent,
+    RoutingProductsListComponent,
+    RoutingProductComponent,
+    RoutingProductEditComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,35 @@
+<div>Product Details</div>
+<table style="border: 1px solid green;">
+  <thead>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Description</td>
+    <td>Price</td>
+    <td>Manfacturing Date</td>
+    <td>Product Age</td>
+  </thead>
+  <tr *ngFor="let product of products">
+    <td>
+      <a [routerLink]="['/products', product.id]"
+      [queryParams]="{'action': 'view', 'productName': product.name}">{{product.id}}</a>
+    </td>
+    <td>
+      {{product.name | uppercase}}
+    </td>
+    <td>
+      {{product.description | lowercase}}
+    </td>
+    <td>
+      {{product.price | currency: 'EUR'}}
+    </td>
+    <td>
+      {{product.manDate | date:'dd/MM/YY'}}
+    </td>
+    <td>
+      {{product.manDate | age }}
+    </td>
+    <td>
+      <a [routerLink]="['/products', product.id, 'edit']">Edit</a>
+    </td>
+  </tr>
+</table>

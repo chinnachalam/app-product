@@ -1,0 +1,43 @@
+<h1 style="text-align: center;">Edit Product</h1>
+
+<table>
+  <tr>
+    <td>
+      Product ID
+    </td>
+    <td>
+      {{product.id}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Product Name
+    </td> <td>
+      {{product.name | uppercase}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Description
+    </td>
+    <td>
+      {{product.description | lowercase}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Price
+    </td>
+    <td>
+      {{product.price | currency: 'EUR'}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Date
+    </td>
+    <td>
+      {{product.manDate | date:'dd/MM/YY'}}
+    </td>
+  </tr>
+</table>
