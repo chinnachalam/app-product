@@ -26,6 +26,7 @@ import { RoutingPageNotFoundComponent } from './routing/routing-page-not-found/r
 import { RoutingProductsListComponent } from './routing/routing-products-list/routing-products-list.component';
 import { RoutingProductComponent } from './routing/routing-product/routing-product.component';
 import { RoutingProductEditComponent } from './routing/routing-product-edit/routing-product-edit.component';
+import { LogoutComponent } from './routing/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { RoutingProductEditComponent } from './routing/routing-product-edit/rout
     RoutingPageNotFoundComponent,
     RoutingProductsListComponent,
     RoutingProductComponent,
-    RoutingProductEditComponent
+    RoutingProductEditComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
