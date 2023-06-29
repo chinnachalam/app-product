@@ -19,8 +19,13 @@ const routes: Routes = [
   { path: 'login', component: RoutingLoginComponent},
   { path: 'logout', component: LogoutComponent},
   { path: 'products', component: RoutingProductsListComponent, canActivate: [AuthGuardGuard]},
+
+  { path: 'products', component: RoutingProductsListComponent, canActivate: [AuthGuardGuard]},
+
   { path: 'products/:id', component: RoutingProductComponent},
   { path: 'products/:id/edit', component: RoutingProductEditComponent},
+
+
   { path: '**', component: RoutingPageNotFoundComponent},
 ];
 

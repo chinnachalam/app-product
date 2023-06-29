@@ -9,6 +9,7 @@ export class LogoutComponent {
 
   constructor(){
     localStorage.removeItem("isLoggedIn")
+    localStorage.clear()
     //sessionStorage.removeItem("isLoggedIn")
   }
 
