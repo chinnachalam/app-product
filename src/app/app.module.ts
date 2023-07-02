@@ -14,8 +14,6 @@ import { AgePipe } from './pipes/age.pipe';
 import { RatingComponent } from './rating/rating.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { TemplateFormExampleComponent } from './template-form-example/template-form-example.component';
-import { NotificationListComponent } from './webhook/all/notification-list/notification-list.component';
-import { NotificationComponent } from './webhook/all/notification/notification.component';
 import { ReactiveFormExampleComponent } from './reactive-form-example/reactive-form-example.component';
 import { ReactiveFormWithForm0buikderExampleComponent } from './reactive-form-with-form0buikder-example/reactive-form-with-form0buikder-example.component';
 import { RoutingHomeComponent } from './routing/routing-home/routing-home.component';
@@ -27,6 +25,9 @@ import { RoutingProductsListComponent } from './routing/routing-products-list/ro
 import { RoutingProductComponent } from './routing/routing-product/routing-product.component';
 import { RoutingProductEditComponent } from './routing/routing-product-edit/routing-product-edit.component';
 import { LogoutComponent } from './routing/logout/logout.component';
+import { IntegrateProductsComponent } from './intergration/integrate-products/integrate-products.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AppProductInterceptorService } from './service/app-product-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -41,8 +42,6 @@ import { LogoutComponent } from './routing/logout/logout.component';
     RatingComponent,
     TemplateFormComponent,
     TemplateFormExampleComponent,
-    NotificationListComponent,
-    NotificationComponent,
     ReactiveFormExampleComponent,
     ReactiveFormWithForm0buikderExampleComponent,
     RoutingHomeComponent,
@@ -53,14 +52,22 @@ import { LogoutComponent } from './routing/logout/logout.component';
     RoutingProductsListComponent,
     RoutingProductComponent,
     RoutingProductEditComponent,
-    LogoutComponent
+    LogoutComponent,
+    IntegrateProductsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AppProductInterceptorService,
+      multi: true,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

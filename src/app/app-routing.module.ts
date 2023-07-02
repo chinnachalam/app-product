@@ -10,6 +10,7 @@ import { RoutingProductComponent } from './routing/routing-product/routing-produ
 import { RoutingProductEditComponent } from './routing/routing-product-edit/routing-product-edit.component';
 import { AuthGuardGuard } from './routing/auth-guard.guard';
 import { LogoutComponent } from './routing/logout/logout.component';
+import { IntegrateProductsComponent } from './intergration/integrate-products/integrate-products.component';
 
 const routes: Routes = [
   { path: '', component: RoutingHomeComponent},
@@ -18,10 +19,7 @@ const routes: Routes = [
   { path: 'contact', component: RoutingContactComponent},
   { path: 'login', component: RoutingLoginComponent},
   { path: 'logout', component: LogoutComponent},
-  { path: 'products', component: RoutingProductsListComponent, canActivate: [AuthGuardGuard]},
-
-  { path: 'products', component: RoutingProductsListComponent, canActivate: [AuthGuardGuard]},
-
+  { path: 'products', component: IntegrateProductsComponent, canActivate: [AuthGuardGuard]},
   { path: 'products/:id', component: RoutingProductComponent},
   { path: 'products/:id/edit', component: RoutingProductEditComponent},
 
