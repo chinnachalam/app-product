@@ -11,6 +11,8 @@ import { RoutingProductEditComponent } from './routing/routing-product-edit/rout
 import { AuthGuardGuard } from './routing/auth-guard.guard';
 import { LogoutComponent } from './routing/logout/logout.component';
 import { IntegrateProductsComponent } from './intergration/integrate-products/integrate-products.component';
+import { ViewStudentComponent } from './student/view-student/view-student.component';
+import { CreateStudentComponent } from './student/create-student/create-student.component';
 
 const routes: Routes = [
   { path: '', component: RoutingHomeComponent},
@@ -22,6 +24,8 @@ const routes: Routes = [
   { path: 'products', component: IntegrateProductsComponent, canActivate: [AuthGuardGuard]},
   { path: 'products/:id', component: RoutingProductComponent},
   { path: 'products/:id/edit', component: RoutingProductEditComponent},
+  { path: 'view-students', component: ViewStudentComponent},
+  { path: 'add-students', component: CreateStudentComponent},
 
 
   { path: '**', component: RoutingPageNotFoundComponent},

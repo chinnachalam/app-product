@@ -1,0 +1,19 @@
+<div>Product Details</div>
+<table style="border: 1px solid green;">
+  <thead>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Email</td>
+  </thead>
+  <tr *ngFor="let student of students">
+    <td>
+      {{student.firstName}}
+    </td>
+    <td>
+      {{student.lastName}}
+    </td>
+    <td>
+      {{student.email}}
+    </td>
+  </tr>
+</table>

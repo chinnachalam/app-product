@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from './../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -152,4 +153,9 @@ obs03 = new Observable( (observer) => {
   }
 
 
+
+  constructor(){
+    console.log("environment" + environment.production);
+    console.log("apiUrl" + environment.apiUrl);
+  }
 }

@@ -28,6 +28,8 @@ import { LogoutComponent } from './routing/logout/logout.component';
 import { IntegrateProductsComponent } from './intergration/integrate-products/integrate-products.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppProductInterceptorService } from './service/app-product-interceptor.service';
+import { ViewStudentComponent } from './student/view-student/view-student.component';
+import { CreateStudentComponent } from './student/create-student/create-student.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,8 @@ import { AppProductInterceptorService } from './service/app-product-interceptor.
     RoutingProductEditComponent,
     LogoutComponent,
     IntegrateProductsComponent,
+    ViewStudentComponent,
+    CreateStudentComponent,
   ],
   imports: [
     BrowserModule,
